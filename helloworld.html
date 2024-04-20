@@ -18,6 +18,8 @@
 	
         <py-script>  
             import matplotlib.pyplot as plt
+	    from example import generate_random_password
+		
             fig, ax = plt.subplots()
             
             year_2 = [2016, 2017, 2018, 2019, 2020, 2021]
@@ -29,7 +31,8 @@
             pyscript.write('lineplot',fig)
 
             print('Python script in pyscript end here ')
-                
+            pyscript.write('lucky', generate_random_password())
+ 
         </py-script>
     </body>
 </html>
