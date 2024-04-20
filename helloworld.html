@@ -7,31 +7,15 @@
         <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 
         <py-env>
-            - matplotlib
 	    - paths:
 	      - ./example.py
         </py-env>
     </head>
     <body>
-        <h1> Plotting a graph </h1>
-        <div id="lineplot"> </div> 
-	
+        
         <py-script>  
-            import matplotlib.pyplot as plt
-	    from example import generate_random_password
-		
-            fig, ax = plt.subplots()
-            
-            year_2 = [2016, 2017, 2018, 2019, 2020, 2021]
-            population_2 = [43, 43, 44, 44, 45, 45]
-            
-            plt.plot(year_2, population_2)
-            
-    
-            pyscript.write('lineplot',fig)
-
-            print('Python script in pyscript end here ')
-            pyscript.write('lucky', generate_random_password())
+            from example import generate_random_password
+	    pyscript.write('lucky', generate_random_password())
  
         </py-script>
     </body>
