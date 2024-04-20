@@ -11,3 +11,4 @@ def generate_random_password():
 	random.shuffle(password)
 
 	return ('Random password: '+''.join(password))
+print(generate_random_password())
